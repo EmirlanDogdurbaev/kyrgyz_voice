@@ -2,6 +2,11 @@ import React from 'react'
 
 function Text() {
 
+    function playAudio() {
+        var audio = new Audio('../../../../src/assets/audio/audio.mp3');
+        audio.play();
+    }    
+
 
     let lastSelectedText = ''; 
 
@@ -19,6 +24,7 @@ function Text() {
         const selectedText = getSelectedText();
         if (selectedText !== '' && selectedText !== lastSelectedText) {
             console.log("Выделенный текст:", selectedText);
+            playAudio();
             lastSelectedText = selectedText;
         }
     });

@@ -6,6 +6,7 @@ import Grammar from "./pages/Grammar/Grammar";
 import Books from "./pages/Books/Books";
 import Book from "./components/Book/Book";
 import Text from "./pages/Books/Text";
+import AudioBooks from "./pages/Audio/Audio";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
           <Route path="/grammatic" element={<Grammar/>} />
           <Route path="/books" element={<Books/>} />
           <Route path="/books/bookText" element={<Text/>} />
+          <Route path="/audio" element={<AudioBooks/>} />
         </Routes>
       </Layout>
     </>
