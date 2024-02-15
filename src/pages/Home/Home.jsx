@@ -14,9 +14,10 @@ const Home = () => {
       <section className={classes.Header}>
         <h1>Добро Пожаловать</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non eius at,
-          tempora nisi porro itaque ut alias. Illo at impedit possimus placeat
-          velit, eos tempore? Hic eum omnis autem dolores.
+          Готовы погрузиться в захватывающий мир кыргызской культуры и языка? Мы
+          рады приветствовать вас здесь и предложить вам уникальную возможность
+          познакомиться с богатым историческим наследием этого удивительного
+          языка.
         </p>
         <button onClick={scrollToTargetElement}>Начать Обучение</button>
       </section>

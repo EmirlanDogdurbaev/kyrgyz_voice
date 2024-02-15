@@ -14,10 +14,20 @@
     }
 
     p {
-      font-size: 20px;
+      font-size: 18px;
       line-height: 1.5;
       width: 650px;
       text-align: center;
+      margin: 20px 0;
+    }
+
+    button{
+      padding: 10px 20px;
+      background-color: white;
+      border: 1px solid black;
+      color: black;
+      font-size: 18px;
+      border-radius: 5px;
     }
   }
 
