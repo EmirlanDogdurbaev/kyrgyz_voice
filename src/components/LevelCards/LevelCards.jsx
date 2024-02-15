@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./LevelCards.module.scss";
 const LevelCards = () => {
   const img =
-    "https://i.mycdn.me/videoPreview?id=5672496007738&type=39&idx=1&tkn=5hkJMZN4ygoc1KUUxKcWb_lORxM&fn=w_548";
+    "https://data.kaktus.media/image/big/2017-05-17_18-34-27_224103.jpg";
   const cardData = [
     {
       level: "Легкий",
@@ -22,7 +22,7 @@ const LevelCards = () => {
     return (
       <article
         className={styles.LevelCards}
-        style={{ backgroundImage: `url(${img})`, backgroundPosition: 'bottom' }}
+        style={{ backgroundImage: `url(${img})`, backgroundSize: '100% 100%' }}
       >
         <h2>{item.level}</h2>
         <Link to={item.url}>Начать курс</Link>
