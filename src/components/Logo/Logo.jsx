@@ -1,9 +1,9 @@
-const Logo = () => {
+import styles from "./Logo.module.scss";
+export default function Logo() {
   return (
-    <div>
-      <h1>Logo</h1>
+    <div className={styles.Logo}>
+      <h1>Kyrgyz</h1>
+
     </div>
   );
-};
-
-export default Logo;
+}
