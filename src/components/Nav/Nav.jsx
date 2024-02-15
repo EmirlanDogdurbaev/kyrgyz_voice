@@ -1,4 +1,5 @@
 
+import Logo from "../Logo/Logo";
 import styles from "./Nav.module.scss";
 import NavItem from "./NavItem/NavItem";
 
@@ -11,7 +12,7 @@ const Nav = (props) => {
 
   return (
     <nav className={navClass}>
-      {/* <Logo /> */}
+      <Logo />
       <ul>
         <li>
           <NavItem to={"/"}>
