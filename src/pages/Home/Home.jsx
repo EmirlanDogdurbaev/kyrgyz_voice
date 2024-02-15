@@ -1,6 +1,8 @@
+import classes from "./Home.module.scss"
+
 const Home = () => {
   return (
-    <div>
+    <div className={classes.Home}>
       <section>
         <h1>home</h1>
         <p>

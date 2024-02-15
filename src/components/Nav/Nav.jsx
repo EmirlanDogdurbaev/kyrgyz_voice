@@ -1,22 +1,65 @@
-import { NavLink } from "react-router-dom";
-import classes from "./Nav.module.scss";
 
-const Nav = () => {
+import styles from "./Nav.module.scss";
+import NavItem from "./NavItem/NavItem";
+
+
+const Nav = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const isActive = props.stateClassName;
+
+  const navClass = isActive ? `${styles.active}` : styles.Nav;
+
   return (
-    <nav className={classes.Nav}>
+    <nav className={navClass}>
+      {/* <Logo /> */}
       <ul>
         <li>
-          <NavLink to={"/profile"}>Профиль</NavLink>
+          <NavItem to={"/"}>
+            {" "}
+            {/* <img src={icon1} alt="" /> */}
+            Главная
+          </NavItem>
         </li>
         <li>
-          <NavLink to={"/gramatic"}>Грамматика</NavLink>
+          <NavItem to={"/profile"}>
+            {" "}
+            {/* <img src={user} alt="" /> */}
+             Профиль
+          </NavItem>
         </li>
         <li>
-          <NavLink to={"/audio"}>Аудио Книги</NavLink>
+          <NavItem to={"/catalog"}>
+          {/* <img src={catalog} alt="" /> */}
+            Каталог
+          </NavItem>
         </li>
-        <li>
-          <NavLink to={"/"}>главная</NavLink>
-        </li>
+        {JSON.parse(localStorage.getItem("user")).role !== "Librarian" ? (
+          <li>
+            <NavItem to={"/basket"}>
+              {/* {" "} */}
+              {/* <img src={icon1} alt="" /> */}
+              
+              Корзина
+            </NavItem>
+          </li>
+        ) : (
+          <>
+            <li>
+              <NavItem to={"/basket"}>
+                {" "}
+                {/* <img src={icon1} alt="" /> */}
+                Заказы
+              </NavItem>
+            </li>
+            <li>
+              <NavItem to={"/new-book"}>
+                {" "}
+                {/* <img src={icon1} alt="" /> */}
+                Новая книга
+              </NavItem>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );

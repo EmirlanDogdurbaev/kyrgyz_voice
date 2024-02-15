@@ -1,26 +1,96 @@
+// .Nav {
+//   width: 100%;
+//   box-shadow: 0 0 15px rgba(0, 0, 0, 0.276);
+
+//   ul {
+//     width: 90%;
+//     margin: 0 auto;
+//     display: flex;
+//     justify-content: flex-end;
+//     gap: 10px;
+//     padding: 10px 0;
+
+//     li {
+//       padding: 10px;
+
+//       a {
+//         color: black;
+//         text-transform: uppercase;
+//         font-size: 14px;
+//         &:hover {
+//           color: red;
+//         }
+//       }
+//     }
+//   }
+// }
+
 .Nav {
-  width: 100%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.276);
-
-  ul {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    padding: 10px 0;
-
-    li {
-      padding: 10px;
-
-      a{
-            color: black;
-            text-transform: uppercase;
-            font-size: 14px;
-            &:hover{
-                  color: red;
-            }
+      width: 370px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100vh;
+      box-shadow: 0 0 15px rgba(128, 128, 128, 0.16);
+      padding: 20px 0;
+      background-color: white;
+    
+    
+    
+      ul {
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        margin: 0 auto;
+    
+        li {
+          padding: 10px;
+          text-align: start;
+        }
+    
+      }
+    
+    
+    }
+    
+    @media screen and (max-width: 500px) {
+      .Nav {
+        display: none;
+      }
+      .active {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100vh;
+        box-shadow: 0 0 15px rgba(128, 128, 128, 0.16);
+        padding: 20px 0;
+        background-color: white;
+    
+    
+        ul {
+          width: 230px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 2px;
+          margin: 0 auto;
+    
+          li {
+            padding: 10px;
+            text-align: start;
+          }
+    
+        }
+    
+    
       }
     }
-  }
-}
+    
+    
