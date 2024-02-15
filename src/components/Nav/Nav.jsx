@@ -36,6 +36,12 @@ const Nav = (props) => {
             Аудио Книги
           </NavItem>
         </li>
+        <li>
+          <NavItem to={"/books"}>
+            {/* <img src={catalog} alt="" /> */}
+            Книги
+          </NavItem>
+        </li>
       </ul>
     </nav>
   );
