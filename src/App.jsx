@@ -4,6 +4,8 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Grammar from "./pages/Grammar/Grammar";
 import Books from "./pages/Books/Books";
+import Book from "./components/Book/Book";
+import Text from "./pages/Books/Text";
 function App() {
   return (
     <>
@@ -12,6 +14,7 @@ function App() {
           <Route path="/" index element={<Home />} />
           <Route path="/grammatic" element={<Grammar/>} />
           <Route path="/books" element={<Books/>} />
+          <Route path="/books/bookText" element={<Text/>} />
         </Routes>
       </Layout>
     </>
