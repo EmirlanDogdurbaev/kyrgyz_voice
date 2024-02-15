@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import classes from "./Home.module.scss";
 import { useRef } from "react";
+import LevelCards from "../../components/LevelCards/LevelCards";
 
 const Home = () => {
   const targetElementRef = useRef(null);
@@ -21,16 +22,16 @@ const Home = () => {
         <button onClick={scrollToTargetElement}>Начать Обучение</button>
       </section>
 
-      <section id="targetElement" ref={targetElementRef}>
-        <article>
-          <h3>asdas</h3>
-        </article>
-        <article>
-          <h3>asdas</h3>
-        </article>
-        <article>
-          <h3>asdas</h3>
-        </article>
+<section>
+  
+</section>
+      <section
+        id="targetElement"
+        ref={targetElementRef}
+        className={classes.Cards_cont}
+      >
+
+        <LevelCards />
       </section>
     </div>
   );
