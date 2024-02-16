@@ -61,7 +61,7 @@ function Quiz() {
       <div>
         <h2>Тест тапшырылды</h2>
         <p>Туура жооптор: {score}</p>
-        <button className={cl.btn} onClick={handleRestart}>Play Again</button>
+        <button className={cl.btn} onClick={handleRestart}>Кайра ойноо</button>
       </div>
     );
   }
@@ -72,7 +72,7 @@ function Quiz() {
       <p>{questions[questionIndex].question}</p>
       <ul className={cl.list}>
         {questions[questionIndex].options.map((option, index) => (
-          <li key={index} onClick={() => handleAnswer(option)}>{option}</li>
+          <li className={cl.li} key={index} onClick={() => handleAnswer(option)}>{option}</li>
         ))}
       </ul>
       {showHint && (
