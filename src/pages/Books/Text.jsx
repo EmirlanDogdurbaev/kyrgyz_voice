@@ -7,7 +7,6 @@ function Text() {
         audio.play();
     }    
 
-
     let lastSelectedText = ''; 
 
     function getSelectedText() {
