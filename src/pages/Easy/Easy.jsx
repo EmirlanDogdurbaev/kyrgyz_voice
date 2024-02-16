@@ -4,6 +4,7 @@ import { header } from "../../store/header";
 import axios from "axios";
 
 import classes from "./Easy.module.scss";
+import { Link } from "react-router-dom";
 const Easy = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -16,42 +17,19 @@ const Easy = () => {
         console.error("Ошибка при получении данных:", error);
       });
   }, []);
+
   console.log(data);
 
   const cardLesson = data.map((item) => {
     return (
-      <div className={classes.Easy} key={item.id}>
-        <section>
-          <h2>{item.title}</h2>
-          <div>
-            <p>{item.description}</p>
-            <h4>Мисалы:</h4>
-            <img src={item.img} alt="тут пример" />
-            <ul>
-              <li>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Commodi, aut!
-              </li>
-              <li>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Commodi, aut!
-              </li>
-              <li>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Commodi, aut!
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section>
-          <h2>Тест:</h2>
-        </section>
-      </div>
+      <article className={classes.Easy} key={item.id}>
+        <h3>{item.title}</h3>
+        <Link to={`/advanced/${item.id}`}>изучить</Link>
+      </article>
     );
   });
 
-  return <div>{cardLesson}</div>;
+  return <div className={classes.Cont}>{cardLesson}</div>;
 };
 
 export default Easy;

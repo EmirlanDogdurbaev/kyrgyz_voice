@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import { header } from "../../store/header";
 import axios from "axios";
 const LevelCards = () => {
-  const img =
-    "https://data.kaktus.media/image/big/2017-05-17_18-34-27_224103.jpg";
+  // const img =
+  //   "https://data.kaktus.media/image/big/2017-05-17_18-34-27_224103.jpg";
 
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -25,7 +25,7 @@ const LevelCards = () => {
       <article
         className={styles.LevelCards}
         key={item.id}
-        style={{ backgroundImage: `url(${img})`, backgroundSize: "100% 100%" }}
+        style={{ backgroundColor:"aliceblue", backgroundSize: "100% 100%" , borderRadius: "4px"}}
       >
         <h2>
           {item.level} {item.url}
