@@ -11,6 +11,9 @@ import AuthForm from "./components/AuthForm/AuthForm.jsx";
 import Login from "./pages/Auth/Login.jsx";
 import Register from "./pages/Auth/Register.jsx";
 import Redirect from "./pages/Redirect/Redirect";
+import Advanced from "./pages/Advanced/Advanced";
+import Intermediate from "./pages/Intermediate/Intermediate";
+import Easy from "./pages/Easy/Easy";
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
             <Route path="/books" element={<Books />} />
             <Route path="/books/bookText" element={<Text />} />
             <Route path="/audio" element={<AudioBooks />} />
+            <Route path="/advanced" element={<Advanced />} />
+            <Route path="/intermediate" element={<Intermediate />} />
+            <Route path="/easy" element={<Easy />} />
           </Routes>
         </Layout>
       ) : (
@@ -55,6 +61,3 @@ function App() {
 }
 
 export default App;
-
-
-

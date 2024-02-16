@@ -1,19 +1,15 @@
-@font-face {
-      font-family: 'OCR'; /* The name you want to use for this font */
-      src: url('../../assets/fonts/OCRAEXT.TTF') format('truetype'); /* URL to the TTF font file */
-    }
-    .Logo{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 30px;
-      h1{
-        font-size: 40px;
-        font-family: 'OCR';
-      }
-      h2{
-        font-size: 32px;
-        color: #749BFF;
-        font-family: 'OCR';
-      }
-    }
+.Logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  h1 {
+    font-size: 40px;
+    font-family: "OCR";
+  }
+  h2 {
+    font-size: 32px;
+    color: #749bff;
+    font-family: "OCR";
+  }
+}
