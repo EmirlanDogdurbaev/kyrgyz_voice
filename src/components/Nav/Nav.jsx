@@ -13,33 +13,15 @@ const Nav = (props) => {
       <Logo />
       <ul>
         <li>
-          <NavItem to={"/"}>
-            {/* <img src={icon1} alt="" /> */}
-            Главная
-          </NavItem>
+          <NavItem to={"/"}>Главная</NavItem>
         </li>
+
         <li>
-          <NavItem to={"/profile"}>
-            {/* <img src={user} alt="" /> */}
-            Профиль
-          </NavItem>
+          <NavItem to={"/grammatic"}>Грамматика</NavItem>
         </li>
+
         <li>
-          <NavItem to={"/grammatic"}>
-            {/* <img src={catalog} alt="" /> */}
-            Грамматика
-          </NavItem>
-        </li>
-        {/* <li>
-          <NavItem to={"/audio"}>
-            Аудио Книги
-          </NavItem>
-        </li>  */}
-        <li>
-          <NavItem to={"/books"}>
-            {/* <img src={catalog} alt="" /> */}
-            Книги
-          </NavItem>
+          <NavItem to={"/books"}>Книги</NavItem>
         </li>
       </ul>
     </nav>

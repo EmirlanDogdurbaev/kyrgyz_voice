@@ -14,6 +14,7 @@ import Redirect from "./pages/Redirect/Redirect";
 import Advanced from "./pages/Advanced/Advanced";
 import Intermediate from "./pages/Intermediate/Intermediate";
 import Easy from "./pages/Easy/Easy";
+import Rules from "./components/Rules/Rules";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/books/bookText" element={<Text />} />
             <Route path="/audio" element={<AudioBooks />} />
             <Route path="/advanced" element={<Advanced />} />
+            <Route path="/advanced/:id" element={<Rules />} />
             <Route path="/intermediate" element={<Intermediate />} />
             <Route path="/easy" element={<Easy />} />
           </Routes>
