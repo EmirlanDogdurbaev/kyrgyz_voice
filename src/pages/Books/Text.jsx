@@ -24,18 +24,11 @@ function Text() {
     if (selectedText !== '' && selectedText !== lastSelectedText) {
       console.log("Выделенный текст:", selectedText);
       // Отправляем запрос
-      axios.post('http://192.168.88.25:8000/tts/send/', { text: selectedText })
+      axios.post('http://192.168.243.149:8000/api/v1/tts/send', { text: selectedText })
         .then(response => {
-          const audioURL = response.data.audio_url;
-          // Получаем аудиофайл
-          axios.get(audioURL, { responseType: 'blob' })
-            .then(response => {
-              const audioBlobURL = URL.createObjectURL(response.data);
-              playAudio(audioBlobURL);
-            })
-            .catch(error => {
-              console.error('There was a problem with the GET request:', error);
-            });
+            console.log(response)
+          const audioURL = response.data
+          playAudio(audioURL)
         })
         .catch(error => {
           console.error('There was a problem with the POST request:', error);
