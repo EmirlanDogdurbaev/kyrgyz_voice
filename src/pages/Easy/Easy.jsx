@@ -9,7 +9,7 @@ const Easy = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get(`${api}/courses/1/lessons`, header)
+      .get(`${api}/course/1/lessons`, header)
       .then((response) => {
         setData(response.data);
       })

@@ -27,7 +27,7 @@ function App() {
             <Route path="/grammatic" element={<Grammar />} />
             <Route path="/grammatic/:id" element={<Lessons />} />
             <Route path="/books" element={<Books />} />
-            <Route path="/books/bookText" element={<Text />} />
+            <Route path="/books/:id" element={<Text />} />
             <Route path="/audio" element={<AudioBooks />} />
             <Route path="/advanced" element={<Advanced />} />
             <Route path="/advanced/:id" element={<Rules />} />

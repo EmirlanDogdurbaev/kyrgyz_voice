@@ -15,19 +15,16 @@ const Nav = (props) => {
         <li>
           <NavItem to={"/"}>Главная</NavItem>
         </li>
-<<<<<<< HEAD
 
         <li>
           <NavItem to={"/grammatic"}>Грамматика</NavItem>
         </li>
 
-=======
         {/* <li>
           <NavItem to={"/profile"}>
             Профиль
           </NavItem>
         </li> */}
->>>>>>> 0e29345 (add jivo chat)
         <li>
           <NavItem to={"/books"}>Книги</NavItem>
         </li>
