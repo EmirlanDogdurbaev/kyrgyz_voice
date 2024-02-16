@@ -28,7 +28,7 @@ const LevelCards = () => {
         style={{ backgroundColor:"aliceblue", backgroundSize: "100% 100%" , borderRadius: "4px"}}
       >
         <h2>
-          {item.level} {item.url}
+          {item.level} 
         </h2>
 
         <Link to={`/${item.url}`}>Начать курс</Link>
