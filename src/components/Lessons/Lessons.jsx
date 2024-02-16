@@ -6,6 +6,48 @@ import Quiz from "../Quiz/Quiz";
 
 const Lessons = () => {
   const { id } = useParams();
+  const [audioSrc, setAudioSrc] = useState(''); 
+
+    function playAudio(audioData) {
+        const audioURL = URL.createObjectURL(audioData);
+        var audioElement = new Audio(audioURL);
+        audioElement.play();
+    }
+
+    useEffect(() => {
+        let lastSelectedText = '';
+
+        function getSelectedText() {
+            let selectedText = '';
+            if (window.getSelection) {
+                selectedText = window.getSelection().toString();
+            } else if (document.selection && document.selection.type !== 'Control') {
+                selectedText = document.selection.createRange().text;
+            }
+            return selectedText;
+        }
+
+        document.addEventListener('mouseup', async function () {
+            const selectedText = getSelectedText();
+            if (selectedText !== '' && selectedText !== lastSelectedText) {
+                console.log("Выделенный текст:", selectedText);
+                try {
+                    const response = await axios.post('http://192.168.243.149:8000/api/v1/tts/send', { text: selectedText }, { responseType: 'blob' });
+                    const audioUrl = URL.createObjectURL(response.data);
+                    setAudioSrc(audioUrl);
+                    const audio = new Audio(audioUrl);
+                    audio.play().catch(error => console.log("Ошибка воспроизведения аудио:", error));
+                } catch (error) {
+                    console.error('There was a problem with the POST request:', error);
+                }
+                lastSelectedText = selectedText;
+            }
+        });
+
+        return () => {
+            document.removeEventListener('mouseup', () => {});
+        };
+    }, []);
 
   const [data, setData] = useState([]);
   useEffect(() => {
