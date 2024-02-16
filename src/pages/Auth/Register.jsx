@@ -9,13 +9,13 @@ import { observer } from "mobx-react-lite";
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPasssword] = useState("");
-  const [userName, setUserName] = useState("");
+  const [username, setUsername] = useState("");
 
   const { store } = useContext(Context);
 
   function register() {
     store
-      .register(email, password, userName)
+      .register(email, password, username)
       .then(() => window.location.reload());
   }
 
@@ -39,13 +39,13 @@ function Register() {
         value={password}
       />
 
-      <label htmlFor="userName">User Name</label>
+      <label htmlFor="username">User Name</label>
       <input
         type="text"
-        id="userName"
-        name="userName"
-        onChange={(e) => setUserName(e.target.value)}
-        value={userName}
+        id="username"
+        name="username"
+        onChange={(e) => setUsername(e.target.value)}
+        value={username}
       />
 
       <button className={styles.Button} onClick={register}>
