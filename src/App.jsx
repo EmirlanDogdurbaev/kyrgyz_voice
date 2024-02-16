@@ -15,7 +15,7 @@ import Redirect from "./pages/Redirect/Redirect";
 function App() {
   return (
     <>
-      {localStorage.getItem("token") ? (
+      {!localStorage.getItem("token") ? (
         <Layout>
           <Routes>
             <Route path="*" element={<Redirect where={"/"} />} />
